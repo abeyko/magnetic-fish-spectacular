@@ -62,7 +62,7 @@
 
 * Rufus - Wears his glasses but does his own repairs on them.
 
-* Margaret just finished her masters in business analysis and vacations with her family in Bermuda.
+* Margaret - just finished her masters in business analysis and vacations with her family in Bermuda.
 
 * Lord Scenturio - A frog god with weather magic and mad SkeeBall skills.
 
