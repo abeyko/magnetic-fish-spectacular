@@ -24,7 +24,7 @@
 
 * Figure out a scoring system for different fish sizes.
 
-* Catching a fish, win condition: when the RFID sensor with magnets (embedded inside the fishing rod tip) makes contact with the opposite polarity magnet inside the fishing mouth, it will read the code on the RFID card. When this code is read, plus the gyroscope/accelerometer detect a tilt in the rod soon after, then that means the fish was caught and a win condition is triggered.
+* Catching a fish, win condition: when the RFID sensor with magnets (embedded inside the fishing rod tip) makes contact with the opposite polarity magnet inside the fish's mouth, it will read the code on the RFID card. When this code is read, plus the gyroscope/accelerometer detect a tilt in the rod soon after, then that means the fish was caught and a win condition is triggered.
 
 <h2>GAMEPLAY:</h2>
 
