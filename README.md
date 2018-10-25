@@ -54,7 +54,7 @@
 
 <h2>MEET THE FISH:</h2>
 
-* CLIDE - It's like Clyde with one "I" (eye) is a cyclops who makes watches as a jeweler.
+* CLIDE - It's like Clyde with one "I" (eye), Clide is a cyclops who makes watches as a jeweler.
 
 * HENRY - Has 6 kids who all live at home and he's supremely stressed out.
 
@@ -62,13 +62,13 @@
 
 * PETER - Plays video games and probably needs glasses because he squints all the time.
 
-* RUFUS - Wears his glasses but does his own repairs on them.
+* RUFUS - Wears his glasses and does his own repairs on them.
 
-* MARGARET - just finished her masters in business analysis and vacations with her family in Bermuda.
+* MARGARET - Just finished her masters in business analysis and vacations with her family in Bermuda.
 
 * LORD SCENTURIO - A frog god with weather magic and mad SkeeBall skills.
 
-* PORTIA - likes planning parties and kareoke but she doesn't like drinking beer. She does like wearing pink.
+* PORTIA - Likes planning parties and kareoke but she doesn't like drinking beer. She does like wearing pink.
 
 <h2>TEAM:</h2>
 
