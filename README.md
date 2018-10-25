@@ -64,3 +64,19 @@ for IOT Hack Day 2018 (https://iothackday2018.devpost.com/)
 * Lord Scenturio - A frog god with weather magic and mad SkeeBall skills.
 
 * Portia - likes planning parties and kareoke but she doesn't like drinking beer. She does like wearing pink.
+
+<h2>TEAM:</h2>
+
+* ANGELIKI BEYKO
+
+* BRIAN MCEVOY
+
+* GREG GARCIA
+
+* DOUG THORPE
+
+* KIM GERST
+
+* RYAN MATZKE
+
+* SETH 
