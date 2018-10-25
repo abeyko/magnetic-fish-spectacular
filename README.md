@@ -30,21 +30,37 @@ for IOT Hack Day 2018 (https://iothackday2018.devpost.com/)
 * Team members will need to set up for the next game and make sure all of the rods have had their reset buttons pressed before the new game starts.
 
 <h2>PARTS:</h2>
+
 * Teensy 3.2V
+
 * Teensy Prop Sheild
+
 * MPU (has gyroscope and accelerometer)
+
 * OLED Screen
+
 * RFID Sensor
+
 * RFID Card
+
 * Ceramic magnets (weaker magnets)
+
 * Neodymium magnets (strong magnets)
 
 <h2>MEET THE FISH:</h2>
+
 * CLIDE - It's like Clyde with one "I" (eye) is a cyclops who makes watches as a jeweler.
+
 * HENRY - Has 6 kids who all live at home and he's supremely stressed out.
+
 * GUS - Is from East Europe and refuses to shave his unibrow because it reminds him of his mother.
+
 * Peter - Plays video games and probably needs glasses because he squints all the time.
+
 * Rufus - Wears his glasses but does his own repairs on them.
+
 * Margaret just finished her masters in business analysis and vacations with her family in Bermuda.
+
 * Lord Scenturio - A frog god with weather magic and mad SkeeBall skills.
+
 * Portia - likes planning parties and kareoke but she doesn't like drinking beer. She does like wearing pink.
