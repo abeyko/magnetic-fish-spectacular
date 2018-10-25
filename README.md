@@ -6,7 +6,7 @@
 
 <h2>GOALS:</h2>
 
-* What the player should see when they catch a fish: (a) hear a splash from the speaker followed by the fish saying something, (b) see the fish's name appear on the oled screen with how many points it's worth, (c) the oled screen should then show how many total points the player has earned as its default state.
+* What the player should experience when they catch a fish: (a) hear a splash from the speaker followed by the fish saying something, (b) see the fish's name appear on the oled screen with how many points it's worth, (c) the oled screen should then show how many total points the player has earned as its default state.
 
 <h2>STEPS:</h2>
 
