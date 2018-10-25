@@ -10,7 +10,7 @@
 
 <h2>STEPS:</h2>
 
-* Test out sample audio playing through speaker using Teensy Prop Sheild (Try using this tutorial that explains how to load a raw audio file onto the Teensy's flash memory: https://learn.sparkfun.com/tutorials/vox-imperium-stormtrooper-voice-changer?_ga=1.151591033.1557711872.1477327445)
+* Test out sample audio playing through speaker using Teensy Prop Shield (Try using this tutorial that explains how to load a raw audio file onto the Teensy's flash memory: https://learn.sparkfun.com/tutorials/vox-imperium-stormtrooper-voice-changer?_ga=1.151591033.1557711872.1477327445)
 
 * Make hardcoded fish name show up on the first line of oled screen, followed by hardcoded number of points earned on the second line of the oled screen
 
