@@ -1,4 +1,4 @@
-# magnet-fish-spectacular
+# magnetic-fish-spectacular
 for IOT Hack Day 2018 (https://iothackday2018.devpost.com/)
 
 <h2>GOALS:</h2>
