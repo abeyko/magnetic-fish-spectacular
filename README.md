@@ -1,5 +1,8 @@
 # magnetic-fish-spectacular
-for IOT Hack Day 2018 (https://iothackday2018.devpost.com/)
+
+* Project for IOT Hack Day on October 27th, 2018: (https://iothackday2018.devpost.com/)
+
+* See our team's hackathon entry, here: (https://devpost.com/software/magnetic-fish-spectacular)
 
 <h2>GOALS:</h2>
 
