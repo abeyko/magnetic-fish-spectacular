@@ -16,7 +16,7 @@
 
 * Find audio sample for splash sound effect and use this as default sound effect for fish being caught until we figure out customized audio recordings for each of the big fish.
 
-* Sew up decoy fish, starfish, octopus with embedded stuffed toy stuffing and RFID card with magnets. (Would like to make twenty total decoy sea creatures).
+* Sew up 16 decoy fish, 2 starfish, and 2 octopuses with embedded stuffed toy stuffing and RFID card with magnets. (Would like to make twenty total decoy sea creatures).
 
 * Program the motor driving the spinning of the circular wooden platform.
 
