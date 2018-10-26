@@ -70,7 +70,7 @@
 
 * PORTIA - Likes planning parties and kareoke but she doesn't like drinking beer. She does like wearing pink.
 
-<h2>MEET THE TEAM:</h2>
+<h2>TEAM:</h2>
 
 * ANGELIKI BEYKO
 
