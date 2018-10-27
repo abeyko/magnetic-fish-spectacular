@@ -39,18 +39,22 @@ void loop() {
   }else if(digitalRead(startPin) == LOW && !emergency){
     startMotor();
     delay(buttonIntervalDelay);
-  }else if(digitalRead(resetPin) == LOW){
+  }else if(digitalRead(resetPin) == LOW && emergency == true){
     emergency = false;
     delay(buttonIntervalDelay);
   }
 }
 
 void startMotor(){
-   for( int i = 0; i <= startSpeed; i += speedUpRate){
+  if(motorSpeed > 0){
+    stop();
+  }else{
+    for( int i = 0; i <= startSpeed; i += speedUpRate){
     analogWrite(pwmPin, i);
     motorSpeed = i;
     delay(500);
    }
+  }
 }
 
 void emergencyStop(){
