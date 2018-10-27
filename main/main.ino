@@ -33,7 +33,7 @@ const float BASS_GAIN_ON = 0.01;
 const float BASS_GAIN_OFF = 0.0;
 const float TREBLE_GAIN_ON = 0.25;    // Voice output volume
 const float TREBLE_GAIN_OFF = 0.0;
-const float SFX_GAIN = 0.05;           // Sound clip volume
+const float SFX_GAIN = 0.5;           // Sound clip volume
 const float SQUELCH_CUTOFF = 0.10;    // Voice threshold
 const int HYSTERESIS_TIME_ON = 20;    // Milliseconds
 const int HYSTERESIS_TIME_OFF = 400;  // Milliseconds
@@ -101,14 +101,12 @@ void setup() {
 }
 
 void loop() {  
-  playFile("click.raw", "raw");
-  playFile("break.raw", "raw");
-  playFile("splash.wav", "wav");
+  playFile("splash-mono.wav");
   delay(500);
 }
 
 // Play a sound clip from serial flash
-void playFile( const char* filename, const char* type ) {
+void playFile( const char* filename) {
 
   if ( DEBUG ) {
     Serial.print("Playing file: ");
@@ -116,11 +114,8 @@ void playFile( const char* filename, const char* type ) {
   }
 
   // Start playing the file
-  if(type.equals("raw"){
     playFlashRaw1.play(filename);
-  } else if(type.equals("wav"){
-    playFlashWav.play(filename);
-  }
+
 
   // A brief delay for the library read info
   delay(5);
