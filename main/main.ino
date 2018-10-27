@@ -3,6 +3,18 @@
 #include <SPI.h>
 #include <SD.h>
 #include <SerialFlash.h>
+#include <Adafruit_SPITFT.h>
+#include <Adafruit_SPITFT_Macros.h>
+#include <gfxfont.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+#define OLED_RESET 4
+Adafruit_SSD1306 display(OLED_RESET);
+
+#if (SSD1306_LCDHEIGHT != 64)
+#error("Height incorrect, please fix Adafruit_SSD1306.h by defining SSD1306_LCDHEIGHT as 64");
+#endif
 
 // GUItool: begin automatically generated code
 AudioInputAnalog         adc1;           //xy=255,182
@@ -58,6 +70,12 @@ long timeout = 0;     // This timeout allows us to put a newline between all the
 
 boolean playSplash = false;
 
+int theScore = 0;
+int theTime = 120;// 120; // 2 minutes
+int currentFish = 0; // no fish + 27 fish
+String fishName = "No Fish Detected...";
+String fishNames[28] = {"No fish detected...", "Lord Scenturio","Clide","Henry","Gus","Peter","Rufus","Margaret","Portia","Ariel", "Elsa", "Dory", "Buffy", "Sushi", "Bubbles", "Casper", "Shadow", "Nemo", "Gilligan", "N Chips", "Bubba", "Cosmo", "Stewy", "Gunther", "Sponge Bob", "Patrick", "Chumley", "Watermelloon"};
+
 void setup() {
 
   Serial.begin(9600);
@@ -96,6 +114,10 @@ void setup() {
   }
   randomSeed(seed);
 
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize with the I2C addr 0x3D (for the 128x64)
+  display.clearDisplay();
+  fishScore(fishNames[currentFish],theScore);
+
   Serial.println("Finished init");
   digitalWrite(AMP_ENABLE, HIGH);  
 }
@@ -111,7 +133,11 @@ void loop() {
   }
   if ((millis() > timeout) && timeout != 0){      // If no new data arrives, print a single newline
     Serial.println("");
+    theScore++;
+    currentFish++;
+    fishScore(fishNames[currentFish],theScore);
     playFile("splash.wav");
+    
     while (Serial1.available()) {
       Serial1.read();
     }
@@ -166,4 +192,29 @@ void playFile( const char* filename) {
  *2 starfish, each worth 5 points
  *
  **/
- 
+
+ void fishScore(String name, int theScore) {
+  Serial.println("FISH SCORE!");
+  Serial.println(name);
+  display.clearDisplay();
+  display.setCursor(0,0);
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.print("Score: ");
+  display.println(theScore);
+
+  display.setTextSize(1);
+  display.println();
+  display.setTextColor(BLACK, WHITE); // 'inverted' 
+  display.setTextSize(1);
+  display.print(" Fish:  ");
+  display.print(name);
+  display.println(" ");
+
+  display.setTextColor(WHITE);
+  display.print("     Time: ");
+  display.println(theTime);
+  
+  display.display();
+  
+}
