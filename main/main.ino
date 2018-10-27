@@ -8,6 +8,7 @@
 AudioInputAnalog         adc1;           //xy=255,182
 AudioFilterBiquad        biquad1;        //xy=394,182
 AudioPlaySerialflashRaw  playFlashRaw1;  //xy=535,319
+AudioPlaySdWav           playFlashWav;
 AudioFilterStateVariable filter1;        //xy=558,189
 AudioAnalyzePeak         peak1;          //xy=559,255
 AudioMixer4              mixer1;         //xy=710,196
@@ -100,13 +101,14 @@ void setup() {
 }
 
 void loop() {  
-  playFile("click.raw");
-  playFile("break.raw");
+  playFile("click.raw", "raw");
+  playFile("break.raw", "raw");
+  playFile("splash.wav", "wav");
   delay(500);
 }
 
 // Play a sound clip from serial flash
-void playFile( const char* filename ) {
+void playFile( const char* filename, const char* type ) {
 
   if ( DEBUG ) {
     Serial.print("Playing file: ");
@@ -114,13 +116,17 @@ void playFile( const char* filename ) {
   }
 
   // Start playing the file
-  playFlashRaw1.play(filename);
+  if(type.equals("raw"){
+    playFlashRaw1.play(filename);
+  } else if(type.equals("wav"){
+    playFlashWav.play(filename);
+  }
 
   // A brief delay for the library read info
   delay(5);
 
   // Wait for the file to finish playing
-  while ( playFlashRaw1.isPlaying() );
+  while ( playFlashRaw1.isPlaying() || playFlashWav.isPlaying());
 
   if ( DEBUG ) {
     Serial.println("...done");
