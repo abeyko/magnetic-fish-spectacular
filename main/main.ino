@@ -33,7 +33,7 @@ const float BASS_GAIN_ON = 0.01;
 const float BASS_GAIN_OFF = 0.0;
 const float TREBLE_GAIN_ON = 0.25;    // Voice output volume
 const float TREBLE_GAIN_OFF = 0.0;
-const float SFX_GAIN = 0.85;           // Sound clip volume
+const float SFX_GAIN = 0.95;           // Sound clip volume
 const float SQUELCH_CUTOFF = 0.10;    // Voice threshold
 const int HYSTERESIS_TIME_ON = 20;    // Milliseconds
 const int HYSTERESIS_TIME_OFF = 400;  // Milliseconds
@@ -53,13 +53,15 @@ typedef enum volState {
 // Global variables
 elapsedMillis fps; // Sample peak only if we have available cycles
 VolState state = QUIET;
-unsigned long timer;
+
+long timeout = 0;     // This timeout allows us to put a newline between all the scans
+
+boolean playSplash = false;
 
 void setup() {
 
-  if ( DEBUG ) {
-    Serial.begin(9600);
-  }
+  Serial.begin(9600);
+  Serial1.begin(9600);
 
   // Initialize amplifier
   AudioMemory(20);
@@ -94,15 +96,28 @@ void setup() {
   }
   randomSeed(seed);
 
-  if ( DEBUG ) {
-    Serial.println("Finished init");
-  }
+  Serial.println("Finished init");
   digitalWrite(AMP_ENABLE, HIGH);  
 }
 
 void loop() {  
-  playFile("splash-mono.wav");
-  delay(500);
+  while (Serial1.available()) {                 // Do this whenever this is data coming in the serial port, pins 0&1
+    int dataFromLine = Serial1.read();          // Put that data in an integer so we can work with it
+    if (dataFromLine < 10){                     // If the data is under ten, print a zero so we get leading zeroes on our data
+      Serial.print("0");
+    }
+    Serial.print(dataFromLine);                 // Print the received data to our USB serial port
+    timeout = (millis() + 5);                   // Wait five milliseconds for any new data
+  }
+  if ((millis() > timeout) && timeout != 0){      // If no new data arrives, print a single newline
+    Serial.println("");
+    playFile("splash.wav");
+    while (Serial1.available()) {
+      Serial1.read();
+    }
+    timeout = 0;
+    Serial.println("clear");
+  }
 }
 
 // Play a sound clip from serial flash
