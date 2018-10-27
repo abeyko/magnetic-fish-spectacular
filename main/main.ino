@@ -142,3 +142,29 @@ void playFile( const char* filename) {
     Serial.println("...done");
   }
 }
+
+/** 
+ *  You caught...!
+ *  
+ *Lord Scenturio: -10 points
+ *0254504848515356575654535603
+ *Clide: 7 points
+ *0254504848515657566667556903
+ *Henry: 7 points
+ *0254504848515653566848685003
+ *Gus: 7 points
+ *0254504848515668485052656903
+ *Peter: 7 points
+ *0254504848515668485165664803
+ *Rufus: 7 points
+ *0254504848515657575450654903
+ *Margaret: 7 points
+ *0254504848515653566848685003
+ *
+ *16 decoy fish, each worth 1 point
+ *2 octopuses, each worth 10 points
+ *2 starfish, each worth 5 points
+ *
+ **/
+ 
+ */
